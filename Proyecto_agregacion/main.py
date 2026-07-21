@@ -59,11 +59,17 @@ async def analizar_video(file: UploadFile = File(...)):
                 if len(contorno) > 0:
                     nombre = nombres[int(id_clase)].lower()
                     
-                    if "rulcell" in nombre: clave = "rulcell"
-                    elif "rulo" in nombre: clave = "rulo"
-                    elif "celula" in nombre or "célula" in nombre: clave = "celula"
-                    elif "solapa" in nombre: clave = "solapa"
-                    else: continue
+                    # Mapeo exacto basado en tu data.yaml
+                    if "rull_cel" in nombre: 
+                        clave = "rulcell"
+                    elif "rulos" in nombre: 
+                        clave = "rulo"
+                    elif "celulas" in nombre: 
+                        clave = "celula"
+                    elif "solapa" in nombre: 
+                        clave = "solapa"
+                    else: 
+                        continue
 
                     contadores[clave] += 1
                     id_objeto = str(contadores[clave])
