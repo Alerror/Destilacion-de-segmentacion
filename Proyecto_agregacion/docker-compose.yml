@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  api_agregacion:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      # Esto conecta tu carpeta "agregacion" en Windows con la carpeta "/app" en Linux.
+      # Lo que FastAPI guarde (la base de datos y los gráficos PNG), aparecerá mágicamente en tu Windows.
+      - .:/app
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

@@ -5,7 +5,7 @@ from ultralytics import YOLO
 
 # 1. Rutas (Verifica que sean las tuyas)
 ruta_modelo = 'C:/Users/benja/OneDrive - mail.pucv.cl/Laboratorio/Agregacion/Codigos/Segmentacion/Modelos/best (2).pt'
-imagen_prueba = 'H:/Alerror/Experimentos/Datos 1-15-2026/60%/20260115/IMG-1300.png'
+imagen_prueba = 'D:/Alerror/Experimentos/Datos 1-15-2026/60%/20260115/IMG-1300.png'
 
 # 2. Cargar modelo y preparar la imagen
 print("Cargando modelo...")
