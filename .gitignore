@@ -1,0 +1,11 @@
+# Ignorar la carpeta de modelos pesados
+Modelos/
+Video/
+# Ignorar archivos temporales y compilados de Python
+__pycache__/
+*.pyc
+
+# Ignorar modelos sueltos en la raíz
+*.onnx
+*.pt
+
